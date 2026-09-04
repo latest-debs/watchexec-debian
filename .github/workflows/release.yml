@@ -2,7 +2,6 @@ name: Build watchexec for Debian
 
 on:
   schedule:
-    # Auto-watch upstream every 3 hours and build new releases.
     - cron: '23 */3 * * *'
   workflow_dispatch:
     inputs:
@@ -78,7 +77,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build watchexec
-        uses: ranjithrajv/debian-multiarch-builder@10b6acab13b28e7741d318584e59cde159ef38e2 # v.0.1a13
+        uses: ranjithrajv/debian-multiarch-builder@10b6acab13b28e7741d318584e59cde159ef38e2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -161,7 +160,7 @@ jobs:
           name: watchexec-debian-packages
 
       - name: Publish release
-        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65
         with:
           draft: ${{ inputs.release_mode == 'draft' }}
           tag_name: ${{ needs.prepare.outputs.version }}+${{ needs.prepare.outputs.build_version }}
