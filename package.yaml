@@ -1,0 +1,8 @@
+# Package definition for watchexec
+
+package_name: watchexec
+github_repo: watchexec/watchexec
+artifact_format: tar.gz
+description: "Execute commands in response to file modifications"
+
+# Build for all Debian suites and all supported architectures.
