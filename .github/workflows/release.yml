@@ -77,7 +77,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build watchexec
-        uses: ranjithrajv/debian-multiarch-builder@10b6acab13b28e7741d318584e59cde159ef38e2
+        uses: ranjithrajv/debian-multiarch-builder@7470e7133fe46f269633be56564c3f5ab9be3d27
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
