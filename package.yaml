@@ -2,8 +2,8 @@
 
 package_name: watchexec
 github_repo: watchexec/watchexec
+license: Apache-2.0
 artifact_format: tar.xz
 description: "Execute commands in response to file modifications"
-license: Apache-2.0
 
 # Build for all Debian suites and all supported architectures.
