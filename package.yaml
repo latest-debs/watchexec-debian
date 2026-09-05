@@ -7,3 +7,10 @@ artifact_format: tar.xz
 description: "Execute commands in response to file modifications"
 
 # Build for all Debian suites and all supported architectures.
+
+# Opt into native Ubuntu builds (builder >= v.0.1a29). Packages without
+# these are served from the Debian suites via the alias fallback.
+ubuntu_distributions:
+  - jammy
+  - noble
+  - resolute
